@@ -1,0 +1,23 @@
+{
+  "name": "WebTurtle",
+  "version": "1.0.0",
+  "description": "The Ultimate Web Toolbox for Webpages!",
+  "manifest_version": 3,
+  "author": ["Christopher Ghanma", "Megan Hoxha", "Siddarth Mallemudi", "Eric Zipor"],
+  "icons": {
+    "16": "graphics/shelly.png", 
+    "48": "graphics/shelly.png", 
+    "128": "graphics/shelly.png" 
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "WebTurtle"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.jsx"]
+    }
+  ],
+  "permissions": ["activeTab", "scripting", "cdn.jsdelivr.net"]
+}

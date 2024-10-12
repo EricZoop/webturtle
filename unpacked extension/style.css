@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,652;1,652&display=swap');
+
+
+::-webkit-scrollbar {
+    width: 5px; 
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.04); 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #18141c;
+  border-radius: 0px 10px 10px 0px;
+  border: 3px solid #e9e6ec;
+}
+
+.circle {
+    --circle-size: 20px;
+    position: fixed;
+    height: var(--circle-size);
+    width: var(--circle-size);
+    border: 2px solid white;
+    border-radius: 100%;
+    top: calc(var(--circle-size) / 2 * -1);
+    left: calc(var(--circle-size) / 2 * -1);
+    pointer-events: none;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Adjust the glow effect as needed */
+}
+
+body {
+    background-color: #0093E9; background-image: linear-gradient(180deg, #00aff5, #006dac);
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 420px;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.banner {
+    width: 50%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-top: 20px; /* Adjust the value as needed */
+    padding-bottom: 10px; /* Adjust the value as needed */
+}
+
+.button_container {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  width: auto; /* Ensure buttons take full width */
+  padding-bottom: 10px; /* Adjust the value as needed */
+  gap: 10px; /* Space between buttons */
+}
+
+.bubble-button {
+  font-family: "Poppins", sans-serif;
+  padding: 10px 16px; /* Increased padding for a nicer button size */
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white background */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 8px; /* Rounded corners for a glassy look */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  backdrop-filter: blur(8px); /* Adds the glassy blur effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.bubble-button:hover {
+  background: rgba(255, 255, 255, 0.2); /* Slightly increase the opacity on hover */
+}
+
+.bubble-button:active {
+  transform: scale(0.95);
+}
+
+.download-button {
+    margin: 0 10px;
+    font-family: "Geist Mono";
+    font-weight: 200;
+    display: inline-block;
+    font-size: 1em;
+    padding: .5em 1em;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #00FF80; /* Light green */
+    color: #434343;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+
+}
+
+.download-button:hover {
+    background-color: #008743;
+    color: #d2f8f8; /* Light text color */
+}
+
+.download-button:focus { outline: 1px; }
+
+.download-button:before, .download-button:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+}
+
+.download-button:before {
+    display: none;
+    top: -75%;
+}
+
+.download-button:after {
+    display: none;
+    bottom: -75%;
+}
+
+.download-button:active {
+    transform: scale(0.9);
+    background-color: #004d26; /* Darker green on click */
+    color: #d2f8f8; /* Light text color */
+    box-shadow: 0 2px 25px rgba(159, 111, 255, 0.5);
+}
+
+iframe::-webkit-scrollbar {
+    width: 0px; /* Set the width of the scrollbar */
+  }
+  
+  iframe::-webkit-scrollbar-thumb {
+    background-color: #91cdfa; /* Set the color of the scrollbar thumb */
+    border-radius: 50px; /* Set border radius for rounded corners */
+  }
+  
+  #iframe {
+    transform-origin: bottom; /* Set the origin point for scaling to the bottom */
+    transform: scale(1); /* Zoom in by 50% (1.5 times) */
+    border: none; /* Remove the border of the iframe */
+    overflow: hidden; /* Hide the overflow content */
+  }
+  
+  iframe {
+    margin-top: 10px;
+    border: none; /* Remove the border of the iframe */
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5em .75em;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn:hover {
+    background-color: #2f2f2f;
+  }
+  
+  .btn:active {
+    transform: scale(0.95);
+  }
+
+.alert {
+    margin-bottom: 20px; /* Add margin at the bottom */
+    font-weight: 600; /* Bold text */
+
+    padding: 1%;
+    border-radius: 2px;
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.445);
+    color: #a70429; /* Bright red color */
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.582); /* Add shadow to the text */
+}
+
+
+.counter_container {
+    font-family: "Geist Mono";
+    margin-top: 5px; /* Reduce spacing between counter and content containers */
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#email_list {
+
+    list-style: none;
+    padding: 0;
+    margin-top: 5px; /* Reduce top margin for URL list */
+}
+
+#email_list li {
+    list-style: none; /* Remove bullet points */
+    padding: 5px 0;
+    border-bottom: 1px solid #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px; /* Adjust the max-width as needed */
+    text-align: left; /* Align text to the left */
+}
+
+#email_list li:last-child {
+    border-bottom: none;
+}
+
+#email_list li::before {
+    /* content: "• "; */
+    color: #cbe4ff; /* Change the color as desired */
+}
+
+#urls_list {
+    list-style: none;
+    padding: 0;
+    margin-top: 5px; /* Reduce top margin for URL list */
+}
+
+#urls_list li {
+    padding: 5px 0;
+    list-style: none; /* Remove bullet points */
+    padding: 5px 0;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 1px solid #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    max-width: 300px; /* Adjust the max-width as needed */
+    text-align: left; /* Align text to the left */
+}
+
+#urls_list li:last-child {
+    border-bottom: none;
+}
+
+#phone_list {
+
+  list-style: none;
+  padding: 0;
+  margin-top: 5px; /* Reduce top margin for URL list */
+}
+
+#phone_list li {
+  list-style: none; /* Remove bullet points */
+  padding: 5px 0;
+  border-bottom: 1px solid #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px; /* Adjust the max-width as needed */
+  text-align: left; /* Align text to the left */
+}
+
+#phone_list li:last-child {
+  border-bottom: none;
+}
+
+#phone_list li::before {
+  /* content: "• "; */
+  color: #cbe4ff; /* Change the color as desired */
+}
+
+
+.malicious_container {
+    margin-top: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+  
+  #malicious_found {
+    list-style: none;
+    padding: 1%;
+    background-color: rgba(255, 255, 255, 0.445);
+    color: #a70429; /* Bright red color */
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.582); /* Add shadow to the text */
+    margin-top: 5px; /* Reduce top margin for malicious list */
+  }
+  
+  #malicious_found li {
+    padding: 5px 0;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 1px solid #ffffff;
+    white-space: nowrap;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Show ellipsis (...) for clipped text */
+    max-width: 300px; /* Adjust the max-width as needed */
+    text-align: left; /* Align text to the left */
+  }
+  
+  #malicious_found li:last-child {
+
+    border-bottom: none;
+  }
+  
+  #malicious_counter {
+    font-family: "Geist Mono";
+  }
+
+.loading-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+.loading-text {
+    color: #fff;
+    font-family: "Geist Mono";
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

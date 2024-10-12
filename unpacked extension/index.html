@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" translate="yes">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="graphics/shelly.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>WebTurtle</title>
+
+</head>
+<body>
+
+    <div class="container">
+        <img src="graphics/webturtle_banner.png" alt="WebTurtle Banner" class="banner" draggable="false">
+        <div class="button_container">  
+            <button class="bubble-button" id="emailscrape_btn">Parse Emails</button>
+            <button class="bubble-button" id="urlscrape_btn">Parse URLs</button>
+            <button class="bubble-button" id="phnnmbrscrape_btn">Parse Phone #s</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="button_container">  
+            <button class="bubble-button" id="show_window">Go Phish!&nbsp;&#8645;</button>
+            <button class="bubble-button" id="scan_btn">Scan Database</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="iframe" class="frame"></div>
+    </div>
+
+    <!-- Loading Dialog -->
+    <div class="loading-dialog" id="loadingDialog">
+        <div class="loading-spinner"></div>
+        <span class="loading-text">Scanning database...</span>
+    </div>
+
+    <div class="malicious_container" style="display: none;">
+        <span class="malicious_counter" id="malicious_counter"></span>
+        <ul id="malicious_found"></ul>
+    </div>
+
+    <div class="counter_container">
+        <span id="email_counter"></span>
+        <span id="url_counter"></span>
+        <span id="phone_counter"></span>
+        <button class="download-button" id="download_txt_btn">Save as Text File&nbsp;&#8599;</button>
+    </div>
+
+    <div class="container">
+        <ul id="email_list"></ul>
+        <ul id="phone_list"></ul>
+        <ul id="urls_list" style="display:none;"></ul>
+    </div>
+
+    <!-- Alert Message -->
+    <div class="container">
+        <div class="alert"></div> 
+    </div>
+
+    <!-- Connect Window -->
+    <script src="frame.jsx"></script>
+
+    <!-- Scraping & Formatting Script -->
+    <script src="content.jsx"></script>
+
+    <!-- Virtual Database Integration -->
+    <script src="reader.jsx"></script>
+
+    <!-- Button Animation -->
+    <script src="bubble.jsx"></script> 
+
+    <!-- Download Functionality -->
+    <script src="download.jsx"></script>
+
+    <!-- Mouse Trailer 
+    <div class="circle"></div>
+    <script src="cursor.jsx"></script>
+    -->
+</body>
+</html>
